@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jemer Academy — Learn. Pass. Excel.</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- ✅ HEADER / NAVBAR -->
+  <header class="bg-[#03045E] text-white shadow-md">
+    <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
+      
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center space-x-2">
+        <img src="https://i.ibb.co/84LR1JX0/russ.png" alt="Jemer Logo" class="h-10">
+        <span class="text-xl font-bold tracking-wide">Jemer Academy</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-8 text-sm font-medium">
+        <a href="#features" class="hover:text-[#00B4D8]">Features</a>
+        <a href="#pricing" class="hover:text-[#00B4D8]">Pricing</a>
+        <a href="#faq" class="hover:text-[#00B4D8]">FAQ</a>
+        <a href="#testimonials" class="hover:text-[#00B4D8]">Testimonials</a>
+      </nav>
+
+      <!-- CTA Buttons -->
+      <div class="hidden md:flex space-x-4">
+        <a href="login.html" class="px-4 py-2 bg-transparent border border-white rounded-full hover:bg-white hover:text-[#03045E] transition duration-200">Login</a>
+        <a href="signup.html" class="px-4 py-2 bg-[#00B4D8] text-white rounded-full hover:bg-white hover:text-[#03045E] transition duration-200">Get Started</a>
+      </div>
+
+      <!-- Mobile Nav Toggle (Coming later) -->
+      <div class="md:hidden">
+        <button id="mobile-menu-button" class="focus:outline-none">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- 💡 HERO SECTION COMING NEXT... -->
+<!-- ✅ HERO SECTION -->
+<!-- ✅ HERO SECTION with Gradient Background -->
+<section class="bg-gradient-to-br from-[#03045E] via-[#0077B6] to-[#00B4D8] py-16 md:py-24 text-white">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col-reverse md:flex-row items-center justify-between gap-10">
+
+    <!-- LEFT TEXT CONTENT -->
+    <div class="md:w-1/2 text-center md:text-left">
+      <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight">
+        Learn. Pass. Excel.<br>Welcome to <span class="text-[#03045E] drop-shadow-[0_0_10px_#00B4D8]">Jemer Academy</span>
+      </h1>      
+      
+      <p class="text-white text-2xl md:text-3xl font-medium mb-8">
+        Unlock your full potential with AI teachers, real exam practice & global learning tools.
+      </p>      
+
+      <div class="mt-6 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+        <a href="signup.html" class="px-6 py-3 bg-white text-[#03045E] rounded-full font-semibold hover:bg-[#CAF0F8] hover:text-[#03045E] transition duration-200">Get Started</a>
+        <a href="login.html" class="px-6 py-3 border border-white text-white rounded-full font-semibold hover:bg-white hover:text-[#03045E] transition duration-200">Login</a>
+      </div>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="md:w-1/2">
+      <img src="https://plus.unsplash.com/premium_photo-1682787495122-3469d63d22ae?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8c3R1ZGVudCUyMGJ5JTIwYSUyMGNvbXB1dGVyfGVufDB8fDB8fHww" 
+           alt="Student learning" 
+           class="rounded-2xl shadow-lg w-full object-cover">
+    </div>
+
+  </div>
+</section>
+<!-- ✅ FEATURES SECTION (UPGRADED) -->
+<section class="bg-[#90E0FF] py-20">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+
+    <!-- Title -->
+    <h2 class="text-4xl md:text-5xl font-extrabold text-[#03045E] mb-3 drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">
+      30+ Features For You To Succeed
+    </h2>
+    <p class="text-center text-[#03045E] text-xl md:text-2x0 font-medium leading-relaxed max-w-3xl mx-auto mb-12">
+      These 5 core features represent just a <span class="text-[#0077B6] font-semibold">taste</span> of what Jemer Academy offers. <br class="hidden md:block">
+      Explore <span class="text-[#00B4D8] font-semibold">smart, AI-powered learning</span> like never before.
+    </p>       
+
+    <!-- Features Grid -->
+    <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+
+      <!-- 1. Snap to Answer -->
+      <div class="bg-white rounded-2xl border overflow-hidden shadow-xl hover:shadow-2xl transition transform duration-300 hover:scale-105">
+        <div class="absolute inset-0 rounded-2xl bg-[#00B4D833] blur-md z-0"></div>
+        <img src="https://plus.unsplash.com/premium_photo-1661687338214-945a8b9ecc4a?w=800&auto=format&fit=crop&q=60" alt="Snap to Answer" class="h-48 w-full object-cover rounded-t-2xl relative z-10">
+        <div class="p-6 relative z-10">
+          <h3 class="text-xl font-bold text-[#03045E] mb-2">Snap to Answer</h3>
+          <p class="text-gray-700">Take a photo of any question and get instant, step-by-step answers powered by AI.</p>
+        </div>
+      </div>
+
+      <!-- 2. Real Exams Practice -->
+      <div class="bg-white rounded-2xl border overflow-hidden shadow-xl hover:shadow-2xl transition transform duration-300 hover:scale-105">
+        <div class="absolute inset-0 rounded-2xl bg-[#0077B633] blur-md z-0"></div>
+        <img src="https://plus.unsplash.com/premium_photo-1681248156496-550d1ad34c65?q=80&auto=format&fit=crop&w=800" alt="Exam Simulator" class="h-48 w-full object-cover rounded-t-2xl relative z-10">
+        <div class="p-6 relative z-10">
+          <h3 class="text-xl font-bold text-[#03045E] mb-2">Real Exams Practice</h3>
+          <p class="text-gray-700">Practice for WAEC, JAMB, IGCSE, and more with real questions and timed exams.</p>
+        </div>
+      </div>
+
+      <!-- 3. AI Video Teacher -->
+      <div class="bg-white rounded-2xl border overflow-hidden shadow-xl hover:shadow-2xl transition transform duration-300 hover:scale-105">
+        <div class="absolute inset-0 rounded-2xl bg-[#00B4D844] blur-md z-0"></div>
+        <img src="https://plus.unsplash.com/premium_photo-1681248156471-5682ce52c46c?q=80&auto=format&fit=crop&w=800" alt="AI Video Teacher" class="h-48 w-full object-cover rounded-t-2xl relative z-10">
+        <div class="p-6 relative z-10">
+          <h3 class="text-xl font-bold text-[#03045E] mb-2">AI Video Teacher</h3>
+          <p class="text-gray-700">Watch smart AI teachers explain tough topics in simple, human-like video formats.</p>
+        </div>
+      </div>
+
+      <!-- 4. Gamified Learning -->
+      <div class="bg-white rounded-2xl border overflow-hidden shadow-xl hover:shadow-2xl transition transform duration-300 hover:scale-105">
+        <div class="absolute inset-0 rounded-2xl bg-[#CAF0F855] blur-md z-0"></div>
+        <img src="https://plus.unsplash.com/premium_vector-1727828194742-9fade94c79ce?w=800&auto=format&fit=crop&q=60" alt="Gamified Learning" class="h-48 w-full object-cover rounded-t-2xl relative z-10">
+        <div class="p-6 relative z-10">
+          <h3 class="text-xl font-bold text-[#03045E] mb-2">Gamified Learning</h3>
+          <p class="text-gray-700">Earn XP, level up, collect badges and streaks — learn while having fun!</p>
+        </div>
+      </div>
+
+      <!-- 5. Global Syllabus --><div class="bg-white rounded-2xl border overflow-hidden shadow-xl hover:shadow-2xl transition transform duration-300 hover:scale-105">
+        <div class="absolute inset-0 rounded-2xl bg-[#90E0FF66] blur-md z-0"></div>
+        <img src="https://plus.unsplash.com/premium_photo-1663099227570-14ac575eac41?q=80&auto=format&fit=crop&w=800" alt="Global Learning" class="h-48 w-full object-cover rounded-t-2xl relative z-10">
+        <div class="p-6 relative z-10">
+          <h3 class="text-xl font-bold text-[#03045E] mb-2">Global Learning System</h3>
+          <p class="text-gray-700">Access school curriculums from Nigeria, the UK, US, Ghana, India, and more in one app.</p>
+        </div>
+      </div>
+<!-- 6. AI Question Explainer -->
+<div class="bg-white rounded-2xl border overflow-hidden shadow-xl hover:shadow-2xl transition transform duration-300 hover:scale-105">
+
+  <div class="absolute inset-0 rounded-2xl bg-[#0077B655] blur-md z-0"></div>
+  <img src="https://plus.unsplash.com/premium_vector-1726043436593-b8bed388340c?q=80&w=880&auto=format&fit=crop" alt="AI Question Explainer" class="h-48 w-full object-cover rounded-t-2xl relative z-10">
+  <div class="p-6 relative z-10">
+    <h3 class="text-xl font-bold text-[#03045E] mb-2">AI Question Explainer</h3>
+    <p class="text-gray-700">Paste or upload any tough question — and Jemer breaks it down step-by-step like a real tutor.</p>
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
+<!-- ✅ TRUSTED BY SECTION – guaranteed logos -->
+<section class="bg-[#90E0FF] py-14">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-2xl md:text-3xl font-semibold text-[#03045E] mb-8">
+      Jemer Academy — Trusted by Global Leaders
+    </h2>
+
+    <div class="flex flex-wrap justify-center items-center gap-10">
+
+      <!-- Logos pulled via Clearbit -->
+      <img src="https://logo.clearbit.com/google.com?size=80"   alt="Google"        class="h-10 w-auto object-contain">
+      <img src="https://logo.clearbit.com/microsoft.com?size=80" alt="Microsoft"     class="h-10 w-auto object-contain">
+      <img src="https://logo.clearbit.com/mit.edu?size=80"       alt="MIT"           class="h-10 w-auto object-contain">
+      <img src="https://logo.clearbit.com/khanacademy.org?size=80" alt="Khan Academy" class="h-10 w-auto object-contain">
+      <img src="https://logo.clearbit.com/harvard.edu?size=80"   alt="Harvard"       class="h-10 w-auto object-contain">
+      <img src="https://logo.clearbit.com/stanford.edu?size=80"  alt="Stanford"      class="h-10 w-auto object-contain">
+      <img src="https://logo.clearbit.com/unesco.org?size=80"    alt="UNESCO"        class="h-10 w-auto object-contain">
+      <img src="https://logo.clearbit.com/andela.com?size=80"    alt="Andela"        class="h-10 w-auto object-contain">
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ✅ TESTIMONIALS SECTION -->
+<section class="bg-[#f9fafb] py-20">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+
+    <h2 class="text-3xl md:text-4xl font-bold text-[#03045E] mb-4">
+      What Students Around the World Say 🌍
+    </h2>
+    <p class="text-gray-600 mb-12 max-w-2xl mx-auto">
+      Trusted by learners in over 100+ countries — here’s what they’re saying about Jemer Academy.
+    </p>
+
+    <!-- Testimonials Grid -->
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+      <!-- Africa -->
+      <div class="bg-white p-6 rounded-xl shadow-md text-left">
+        <div class="flex items-center gap-3 mb-2">
+          <img src="https://flagcdn.com/w40/ng.png" alt="Nigeria" class="w-6 h-4">
+          <span class="font-semibold text-[#03045E]">Precious A., Nigeria</span>
+        </div>
+        <p class="text-gray-700 mb-3">
+          Jemer helped me pass my WAEC with ease. The AI teacher felt like magic — I finally understood math!
+        </p>
+        <p class="text-yellow-500">★★★★★</p>
+      </div>
+
+      <!-- Europe -->
+      <div class="bg-white p-6 rounded-xl shadow-md text-left">
+        <div class="flex items-center gap-3 mb-2">
+          <img src="https://flagcdn.com/w40/gb.png" alt="UK" class="w-6 h-4">
+          <span class="font-semibold text-[#03045E]">Oliver R., UK</span>
+        </div>
+        <p class="text-gray-700 mb-3">
+          I'm shocked how good this is. I used Jemer for IGCSE revision and my scores jumped big time.
+        </p>
+        <p class="text-yellow-500">★★★★★</p>
+      </div>
+
+      <!-- Asia -->
+      <div class="bg-white p-6 rounded-xl shadow-md text-left">
+        <div class="flex items-center gap-3 mb-2">
+          <img src="https://flagcdn.com/w40/in.png" alt="India" class="w-6 h-4">
+          <span class="font-semibold text-[#03045E]">Riya D., India</span>
+        </div>
+        <p class="text-gray-700 mb-3">
+          This is the best EdTech I've used. The Snap to Answer feature is my lifesaver during homework!
+        </p>
+        <p class="text-yellow-500">★★★★★</p>
+      </div>
+
+      <!-- North America -->
+      <div class="bg-white p-6 rounded-xl shadow-md text-left">
+        <div class="flex items-center gap-3 mb-2">
+          <img src="https://flagcdn.com/w40/us.png" alt="USA" class="w-6 h-4">
+          <span class="font-semibold text-[#03045E]">Jayden M., USA</span>
+        </div>
+        <p class="text-gray-700 mb-3">
+          I’ve used a lot of platforms, but none make learning this fun. Jemer is different. It feels alive.
+        </p>
+        <p class="text-yellow-500">★★★★★</p>
+      </div>
+
+      <!-- South America -->
+      <div class="bg-white p-6 rounded-xl shadow-md text-left">
+        <div class="flex items-center gap-3 mb-2">
+          <img src="https://flagcdn.com/w40/br.png" alt="Brazil" class="w-6 h-4">
+          <span class="font-semibold text-[#03045E]">Camila S., Brazil</span>
+        </div>
+        <p class="text-gray-700 mb-3">
+          I never thought AI learning could be this fun. I love the gamified learning system. Muito bom!
+        </p>
+        <p class="text-yellow-500">★★★★★</p>
+      </div>
+
+      <!-- Australia -->
+      <div class="bg-white p-6 rounded-xl shadow-md text-left">
+        <div class="flex items-center gap-3 mb-2">
+          <img src="https://flagcdn.com/w40/au.png" alt="Australia" class="w-6 h-4">
+          <span class="font-semibold text-[#03045E]">Liam T., Australia</span>
+        </div>
+        <p class="text-gray-700 mb-3">
+          I used Jemer to prep for uni exams. Their AI Video Teachers are 100x better than YouTube.
+        </p>
+        <p class="text-yellow-500">★★★★★</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ✅ WHY JEMER ACADEMY — 3 Image Professional Layout -->
+<section class="bg-[#f9fafb] py-24">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+
+    <!-- ✅ Left: Text Content -->
+    <!-- ✅ WHY JEMER TEXT – FINAL, CLEAN, AND WORKING -->
+<div>
+  <!-- Title -->
+  <h2 style="font-size: 50px; color: #03045E; font-weight: 800; line-height: 1.2; margin-bottom: 24px;">
+    Why Learners Trust <br>
+    <span style="color: #0077B6;">Jemer Academy</span>
+  </h2>
+
+  <!-- Description -->
+  <p style="font-size: 27px; color: #333; font-weight: 500; line-height: 1.6; margin-bottom: 24px;">
+    Jemer Academy is more than just online learning — it's a future-building platform designed for real success in exams, jobs, and life.
+  </p>
+
+  <!-- Highlight box -->
+  <div style="background-color: #CAF0F8; padding: 16px; border-radius: 12px; color: #03045E; font-size: 20px; font-weight: 600; margin-bottom: 24px;">
+    📈 <span style="color: #0077B6; font-weight: bold;">78%</span> of Jemer learners land a new job, improve their grades, or advance their careers within 6 months of starting.
+  </div>
+
+  <!-- List -->
+  <ul style="list-style: none; padding: 0; color: #0077B6; font-size: 23px; font-weight: 600; line-height: 1.6;">
+    <li>✅ Personalized AI teachers that fit your learning pace</li>
+    <li>✅ Exam-ready tools that simulate real testing environments</li>
+    <li>✅ Covers African, Asian, American, and global curriculum</li>
+  </ul>
+</div>
+
+
+    <!-- ✅ Right: 3 Stacked Images -->
+    <div class="flex flex-col gap-6">
+      <img 
+        src="https://t4.ftcdn.net/jpg/05/54/83/69/360_F_554836905_BgknrE5vsvotyISK27dUVhXApxjvMPnE.jpg" 
+        alt="Students succeeding" 
+        class="w-full rounded-xl shadow-xl border-4 border-white"
+      >
+      <img 
+        src="https://assets.tes.com/magazine-attachments/s3fs-public/styles/amp_1200x675_16_9/public/media/image/archived/happy_teacher_4.jpg?itok=vOSHlFkK" 
+        alt="Happy learner" 
+        class="w-full rounded-xl shadow-xl border-4 border-white"
+      
+      >
+    </div>
+
+  </div>
+</section>
+
+<!-- ✅ Jemer Academy — Features Card Pricing Section with Links on Buttons -->
+<section class="bg-gradient-to-b from-[#E0F7FA] to-[#F1FAFF] py-20" id="pricing">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-4xl md:text-5xl font-extrabold text-center text-[#03045E] mb-4 animate-fade">30+ Features to Help You Succeed</h2>
+    <p class="text-center text-lg text-gray-600 mb-12 max-w-3xl mx-auto animate-fade delay-100">
+      Explore smart learning through personalized AI, real exam prep, gamified experiences, and global curriculum access — all in one place.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- FREE PLAN -->
+      <div class="bg-white border rounded-2xl p-6 shadow hover:shadow-lg transition duration-300 transform hover:scale-105 animate-fade delay-200">
+        <h3 class="text-2xl font-bold text-[#0077B6] mb-2">✅ Free Plan</h3>
+        <p class="text-xl text-[#03045E] font-semibold mb-4">$0/month</p>
+        <ul class="space-y-3 text-sm text-gray-700">
+          <li title="Includes access to syllabus-aligned content">✅ Global Curriculum Courses</li>
+          <li title="Listen to content with TTS AI">✅ Text-to-Speech</li>
+          <li title="Compete with others in real-time quizzes">✅ Gamified Quiz Battles</li>
+          <li>✅ Social Network</li>
+          <li>✅ Study Timetable Generator</li>
+          <li>✅ School Finder Tool</li>
+          <li>✅ Rewards System</li>
+          <li>✅ Question Bank Explorer</li>
+          <li>✅ Learning Paths + Focus Mode</li>
+          <li>✅ Dark Mode / Accessibility</li>
+          <li>✅ Multi-language Support</li>
+          <li>✅ Localized Learning</li>
+        </ul>
+        <a href="signup.html" class="block mt-6 w-full bg-[#0077B6] text-white py-2 px-4 text-center rounded-xl font-semibold hover:bg-[#03045E] transition">Get Started</a>
+      </div>
+
+      <!-- BASIC PLAN -->
+      <div class="bg-white border-2 border-[#0077B6] rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105 animate-fade delay-300">
+        <h3 class="text-2xl font-bold text-[#0077B6] mb-2">💠 Basic Plan</h3>
+        <p class="text-xl text-[#03045E] font-semibold mb-4">$5.99/month<br><span class="text-sm">or $70.99/year</span></p>
+        <ul class="space-y-3 text-sm text-gray-800">
+          <li title="Smart Instant Answer AI feature">✅ Snap-to-Answer AI <span class="text-[#00B4D8]">[SIA]</span></li>
+          <li title="Summarizes content into concise notes">✅ Smart Notes Generator [SIA]</li>
+          <li title="Simulates timed exams">✅ Exam Simulator [SIA]</li>
+          <li title="Ask questions and get AI responses">✅ JemerGPT Assistant [SIA]</li>
+          <li>✅ AI Career Advisor [SIA]</li>
+          <li>✅ Scholarship Finder Tool [SIA]</li>
+          <li>✅ AI Essay Grader [SIA]</li>
+          <li>✅ Group Study Rooms</li>
+          <li>✅ Private Notes Vault</li>
+          <li>✅ Secure Cloud Storage</li>
+          <li>🟡 Live Tutors (Limited)</li>
+          <li>🟡 Exam Simulator Access</li>
+        </ul>
+        <a href="signup.html" class="block mt-6 w-full bg-[#0077B6] text-white py-2 px-4 text-center rounded-xl font-semibold hover:bg-[#03045E] transition">Get Started</a>
+      </div>
+
+      <!-- PREMIUM PLAN -->
+      <div class="bg-white border rounded-2xl p-6 shadow hover:shadow-lg transition duration-300 transform hover:scale-105 animate-fade delay-400">
+        <h3 class="text-2xl font-bold text-[#0077B6] mb-2">🔥 Premium Plan</h3>
+        <p class="text-xl text-[#03045E] font-semibold mb-4">$15.99/month<br><span class="text-sm">or $300.99/year</span></p>
+        <ul class="space-y-3 text-sm text-gray-700">
+          <li title="AI-powered video explanations">✅ AI Video Teacher [SIA]</li>
+          <li>✅ All Basic Features</li>
+          <li>✅ Offline Mode</li>
+          <li>✅ Downloadable Courses</li>
+          <li title="Unlocks full suite of Jemer's advanced AI">✅ Exclusive Advanced AI Tools [SIA]</li>
+          <li>✅ Full Live Tutor Access</li>
+          <li>✅ Past Question Scanner [SIA]</li>
+        </ul>
+        <a href="signup.html" class="block mt-6 w-full bg-[#0077B6] text-white py-2 px-4 text-center rounded-xl font-semibold hover:bg-[#03045E] transition">Get Started</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Animation Styles -->
+<style>
+  @keyframes fade {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade {
+    opacity: 0;
+    animation: fade 1s ease forwards;
+  }
+  .delay-100 { animation-delay: 0.1s; }
+  .delay-200 { animation-delay: 0.2s; }
+  .delay-300 { animation-delay: 0.3s; }
+  .delay-400 { animation-delay: 0.4s; }
+</style>
+
+<!-- ✅ Jemer Academy — Features Card Pricing Section with Links on Buttons -->
+<!-- (Pricing section code remains unchanged) -->
+
+<!-- ✅ Jemer Academy — Features Card Pricing Section with Links on Buttons -->
+<!-- (Pricing and FAQ sections remain unchanged) -->
+
+<!-- ✅ Jemer Academy — Features Card Pricing Section with Links on Buttons -->
+<!-- (Pricing and FAQ sections remain unchanged) -->
+
+<!-- ✅ GLOBAL FOOTER WITH WORKING LANGUAGE SWITCHER & EMAIL SENDER -->
+<footer class="bg-[#03045E] text-white py-16">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-5 gap-10">
+    <!-- Brand Section -->
+    <div>
+      <h2 class="text-2xl font-bold mb-4">Jemer Academy</h2>
+      <p class="text-sm text-gray-300 mb-4">Learn. Pass. Excel. Jemer is Africa’s most advanced AI learning platform built for global students aiming for real results.</p>
+      <div class="flex space-x-4">
+        <a href="#" class="hover:text-[#00B4D8]">Facebook</a>
+        <a href="#" class="hover:text-[#00B4D8]">Twitter</a>
+        <a href="#" class="hover:text-[#00B4D8]">Instagram</a>
+      </div>
+    </div>
+
+    <!-- Navigation Links -->
+    <div>
+      <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li><a href="#features" class="hover:text-[#00B4D8]">Features</a></li>
+        <li><a href="#pricing" class="hover:text-[#00B4D8]">Pricing</a></li>
+        <li><a href="#faq" class="hover:text-[#00B4D8]">FAQ</a></li>
+        <li><a href="signup.html" class="hover:text-[#00B4D8]">Sign Up</a></li>
+        <li><a href="login.html" class="hover:text-[#00B4D8]">Login</a></li>
+      </ul>
+    </div>
+
+    <!-- Product Section -->
+    <div>
+      <h3 class="text-xl font-semibold mb-4">Products</h3>
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li><a href="#" class="hover:text-[#00B4D8]">JemerGPT AI Assistant</a></li>
+        <li><a href="#" class="hover:text-[#00B4D8]">Smart Notes Generator</a></li>
+        <li><a href="#" class="hover:text-[#00B4D8]">Exam Simulator</a></li>
+        <li><a href="#" class="hover:text-[#00B4D8]">Scholarship Finder</a></li>
+        <li><a href="#" class="hover:text-[#00B4D8]">Global Curriculum</a></li>
+      </ul>
+    </div>
+
+    <!-- App Download Section -->
+    <div>
+      <h3 class="text-xl font-semibold mb-4">Get the App</h3>
+      <p class="text-sm text-gray-300 mb-4">Coming soon to Android & iOS.</p>
+      <div class="space-y-2">
+        <div class="w-36 h-10 bg-gray-500 rounded flex items-center justify-center text-sm text-white">Play Store</div>
+        <div class="w-36 h-10 bg-gray-500 rounded flex items-center justify-center text-sm text-white">App Store</div>
+      </div>
+    </div>
+
+    <!-- Newsletter and Language Section -->
+    <div>
+      <h3 class="text-xl font-semibold mb-4">Stay in the Loop</h3>
+      <form class="space-y-3" onsubmit="sendEmail(event)">
+        <input type="email" id="newsletter-email" placeholder="Your email" required class="w-full px-3 py-2 rounded text-black" />
+        <button type="submit" class="w-full bg-[#00B4D8] hover:bg-[#0077B6] text-white py-2 rounded">Subscribe</button>
+      </form>
+      <div class="mt-6">
+        <label for="language" class="block mb-1 text-sm text-gray-300">🌐 Language</label>
+        <select id="language" class="w-full px-3 py-2 text-black rounded" onchange="translatePage(this.value)">
+          <option value="en">English</option>
+          <option value="fr">French</option>
+          <option value="sw">Swahili</option>
+          <option value="ar">Arabic</option>
+          <option value="es">Spanish</option>
+          <option value="pt">Portuguese</option>
+          <option value="de">German</option>
+          <option value="hi">Hindi</option>
+          <option value="zh-CN">Chinese (Simplified)</option>
+          <option value="ja">Japanese</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-12 border-t border-[#0077B6] pt-6 text-center text-sm text-gray-400">
+    © 2025 Jemer Academy. All rights reserved. Built with ❤️ for learners everywhere.
+  </div>
+</footer>
+
+<!-- 🌐 Google Translate Element -->
+<div id="google_translate_element" style="display:none;"></div>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'af,ak,am,ar,az,bm,be,bg,bn,bs,ca,ceb,co,cs,cy,da,de,el,en,eo,es,et,eu,fa,fi,fr,fy,ga,gd,gl,gu,ha,haw,he,hi,hr,ht,hu,hy,id,ig,is,it,ja,jv,ka,kk,km,kn,ko,ku,ky,la,lb,lo,lt,lv,mg,mi,mk,ml,mn,mr,ms,mt,my,ne,nl,no,ny,pa,pl,ps,pt,ro,ru,rw,sd,si,sk,sl,sm,sn,so,sq,sr,st,sv,sw,ta,te,tg,th,ti,tk,tr,tt,ug,uk,ur,uz,vi,wo,xh,yi,yo,zh-CN,zu'}, 'google_translate_element');
+  }
+
+  function translatePage(lang) {
+    const select = document.querySelector('.goog-te-combo');
+    if (select) {
+      select.value = lang;
+      select.dispatchEvent(new Event("change"));
+    } else {
+      alert("Translator is still loading, please wait a few seconds and try again.");
+    }
+  }
+
+  function sendEmail(event) {
+    event.preventDefault();
+    const email = document.getElementById("newsletter-email").value;
+    if (!email) return alert("Enter your email address");
+
+    // Use Formspree (free) or EmailJS (JS-based)
+    fetch("https://formspree.io/f/mdkzveww", {
+      method: "POST",
+      headers: {
+        "Accept": "application/json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ email: email })
+    })
+    .then(response => {
+      if (response.ok) {
+        alert("Thanks for subscribing!");
+        document.getElementById("newsletter-email").value = "";
+      } else {
+        alert("Something went wrong. Please try again later.");
+      }
+    })
+    .catch(error => {
+      alert("Error: " + error.message);
+    });
+  }
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

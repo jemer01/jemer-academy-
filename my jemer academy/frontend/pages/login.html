@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Jemer Academy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <link rel="icon" href="https://i.ibb.co/84LR1JX0/russ.png" />
+
+  <!-- 🔥 Animations -->
+  <style>
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slide-up {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes zoom-in {
+      from { transform: scale(0.95); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .animate-fade-in {
+      animation: fade-in 1.2s ease-out forwards;
+    }
+
+    .animate-slide-up {
+      animation: slide-up 1.2s ease-out forwards;
+    }
+
+    .animate-zoom {
+      animation: zoom-in 0.7s ease-out forwards;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-r from-[#CAF0F8] to-white min-h-screen flex items-center justify-center">
+
+  <div class="flex w-full max-w-6xl mx-auto shadow-2xl bg-white rounded-2xl overflow-hidden flex-col md:flex-row border border-[#CAF0F8]">
+
+    <!-- LEFT: Login Form -->
+    <div class="w-full md:w-1/2 p-8 md:p-12 animate-zoom">
+      <!-- Logo -->
+      <div class="mb-6">
+        <img src="https://i.ibb.co/84LR1JX0/russ.png" alt="Jemer Logo" class="w-24 h-auto" />
+      </div>
+
+      <!-- Welcome Text -->
+      <h2 class="text-3xl font-bold text-[#03045E] mb-2">Welcome back</h2>
+      <p class="text-gray-600 mb-6">Login to your Jemer Academy account</p>
+
+      <!-- Toggle: Email or Phone -->
+      <div class="mb-4 flex space-x-4">
+        <button onclick="toggleLogin('email')" id="emailBtn" class="flex-1 py-2 px-4 rounded border text-center font-medium text-white bg-[#0077B6]">Email</button>
+        <button onclick="toggleLogin('phone')" id="phoneBtn" class="flex-1 py-2 px-4 rounded border text-center font-medium text-[#0077B6] border-[#0077B6]">Phone</button>
+      </div>
+
+      <!-- Login Form -->
+      <form onsubmit="handleLogin(event)" class="space-y-4">
+        
+        <!-- Email or Phone Input -->
+        <input type="text" id="emailOrPhone" placeholder="Email address" class="w-full px-4 py-2 border rounded text-sm focus:outline-none focus:ring-2 focus:ring-[#00B4D8] transition duration-200" required />
+
+        <!-- Password Field -->
+        <div class="relative">
+          <input type="password" id="password" placeholder="Password" class="w-full px-4 py-2 border rounded text-sm focus:outline-none focus:ring-2 focus:ring-[#00B4D8] transition duration-200" required />
+          <span onclick="togglePassword()" id="eyeIcon" class="absolute right-3 top-2.5 cursor-pointer text-blue-500 transition duration-300 ease-in-out">
+            👁️
+          </span>
+        </div>
+
+        <!-- Error Message -->
+        <p id="loginError" class="text-sm text-red-600 hidden">❌ Please enter correct login details.</p>
+
+        <!-- Forgot Password -->
+        <div class="text-right text-sm">
+          <a href="#" onclick="handleForgotPassword()" class="text-blue-600 hover:underline">Forgot password?</a>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="w-full py-2 px-4 bg-[#03045E] text-white font-semibold rounded hover:bg-[#002d91] shadow-lg hover:shadow-xl transition-all duration-300">Login</button>
+      </form>
+
+      <!-- OR Divider -->
+      <div class="my-6 text-center text-gray-500 text-sm">OR</div>
+
+      <!-- Social Login Buttons -->
+      <div class="space-y-3">
+        <button onclick="loginWithGoogle()" class="w-full py-2 flex items-center justify-center border rounded hover:bg-gray-100 transition duration-200">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" class="w-5 h-5 mr-2" />
+          Sign in with Google
+        </button>
+        <button onclick="loginWithGitHub()" class="w-full py-2 flex items-center justify-center border rounded hover:bg-gray-100 transition duration-200">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-5 h-5 mr-2" />
+          Sign in with GitHub
+        </button>
+      </div>
+
+      <!-- Signup Link -->
+      <p class="mt-6 text-sm text-center text-gray-600">
+        Don’t have an account?
+        <a href="signup.html" class="text-[#0077B6] font-medium hover:underline">Sign up here</a>
+      </p>
+    </div>
+
+    <!-- RIGHT: Clearer Image, Smooth Animation, Overlay -->
+    <div class="w-full md:w-1/2 hidden md:block relative overflow-hidden group animate-fade-in">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSECpJDCYDERAi2VcUI9yM_Y3DtiSd7-kUhyJPZ54QFs1XWZWsDuEJFUAbe&s=10"
+        alt="Login Illustration"
+        class="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-1000 ease-in-out contrast-125"
+      />
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-[#03045E]/60 flex items-center justify-center">
+        <h2 class="text-white text-2xl md:text-3xl lg:text-4xl font-bold text-center px-4 leading-snug animate-slide-up">
+          Education for Everyone, <br /> Powered by AI
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- Supabase Auth Logic -->
+  <script>
+    const SUPABASE_URL = 'https://jvrzqfpouvesjnectxzi.supabase.co';
+    const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp2cnpxZnBvdXZlc2puZWN0eHppIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTEwNzYxNDgsImV4cCI6MjA2NjY1MjE0OH0.l-gUZXbH34iaM0H4NT3s8eEGjEpM328hROvNlinh6zM';
+    const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+    function toggleLogin(type) {
+      const input = document.getElementById('emailOrPhone');
+      const emailBtn = document.getElementById('emailBtn');
+      const phoneBtn = document.getElementById('phoneBtn');
+
+      if (type === 'email') {
+        input.placeholder = 'Email address';
+        input.type = 'email';
+        emailBtn.classList.add('bg-[#0077B6]', 'text-white');
+        phoneBtn.classList.remove('bg-[#0077B6]', 'text-white');
+        phoneBtn.classList.add('text-[#0077B6]');
+      } else {
+        input.placeholder = 'Phone number';
+        input.type = 'tel';
+        phoneBtn.classList.add('bg-[#0077B6]', 'text-white');
+        emailBtn.classList.remove('bg-[#0077B6]', 'text-white');
+        emailBtn.classList.add('text-[#0077B6]');
+      }
+    }
+
+    function togglePassword() {
+      const passField = document.getElementById('password');
+      const eyeIcon = document.getElementById('eyeIcon');
+      const isPassword = passField.getAttribute('type') === 'password';
+      passField.setAttribute('type', isPassword ? 'text' : 'password');
+      eyeIcon.innerText = isPassword ? '🙈' : '👁️';
+    }
+
+    async function handleLogin(e) {
+      e.preventDefault();
+      const loginInput = document.getElementById('emailOrPhone');
+      const password = document.getElementById('password').value;
+      const email = loginInput.type === 'email' ? loginInput.value : null;
+      const errorBox = document.getElementById('loginError');
+
+      if (!email || !password) {
+        errorBox.textContent = "❌ Please enter all required fields.";
+        errorBox.classList.remove("hidden");
+        return;
+      }
+
+      const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+
+      if (error) {
+        errorBox.textContent = "❌ Incorrect credentials. Please try again.";
+        errorBox.classList.remove("hidden");
+      } else {
+        errorBox.classList.add("hidden");
+        window.location.href = "dashboard.html";
+      }
+    }
+
+    async function handleForgotPassword() {
+      const input = document.getElementById('emailOrPhone');
+      const email = input.value;
+      if (!email || input.type !== 'email') {
+        alert("Please enter a valid email address.");
+        return;
+      }
+      const { error } = await supabase.auth.resetPasswordForEmail(email, {
+        redirectTo: `${window.location.origin}/reset.html`
+      });
+      if (error) {
+        alert("Error sending reset email: " + error.message);
+      } else {
+        alert("Reset link sent to your email.");
+      }
+    }
+
+    async function loginWithGoogle() {
+      const { error } = await supabase.auth.signInWithOAuth({
+        provider: 'google',
+        options: { redirectTo: `${window.location.origin}/dashboard.html` }
+      });
+      if (error) alert(error.message);
+    }
+
+    async function loginWithGitHub() {
+      const { error } = await supabase.auth.signInWithOAuth({
+        provider: 'github',
+        options: { redirectTo: `${window.location.origin}/dashboard.html` }
+      });
+      if (error) alert(error.message);
+    }
+  </script>
+</body>
+</html>
